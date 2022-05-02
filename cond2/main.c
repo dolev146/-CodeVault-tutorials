@@ -41,7 +41,7 @@ void *fuel_filling(void *arg)
         fuel = fuel + 30;
         printf("Fillig Fuell is now %d\n", fuel);
         pthread_mutex_unlock(&mutexFuel);
-        pthread_cond_broadcast(&condFuel);
+        pthread_cond_signal(&condFuel);
         sleep(1);
     }
 }
