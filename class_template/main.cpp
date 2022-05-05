@@ -30,24 +30,34 @@ T Bucky<T>::bigger()
         return second;
 }
 
+// template <class T>
+// class githubBucky
+// {
+// public:
+//     githubBucky(T value)
+//     {
+//         this->value = value;
+//     }
+//     T getValue()
+//     {
+//         return value;
+//     }
 
-template <class T>
-class githubBucky
-{
-public:
-    githubBucky(T value)
-    {
-        this->value = value;
-    }
-    T getValue()
-    {
-        return value;
-    }
-
-private:
-    T value;
-};
+// private:
+//     T value;
+// };
 
 int main()
 {
+    Bucky<int> bo(69, 105);
+    std::cout << bo.bigger() << std::endl;
+
+    Bucky<int> bucky(10, 20);
+    bucky.print();
+    std::cout << bucky.bigger() << std::endl;
+
+    // githubBucky<int> githubBucky(10);
+    // std::cout << githubBucky.getValue() << std::endl;
+
+    return 0;
 }
